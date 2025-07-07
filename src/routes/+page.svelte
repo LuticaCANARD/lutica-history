@@ -13,7 +13,7 @@
 		await init();
 		const canvasOrigin = document.createElement('canvas');
 		const canvasProxy = new CanvasProxy(canvasOrigin);
-		context = await new WgpuContext(canvasProxy, '/placeholder.png');
+		context = new WgpuContext(canvasProxy, '/placeholder.png');
 
 		function render() {
 			if (context) {
@@ -48,7 +48,7 @@
 	<title>{m.title()}</title>
 </svelte:head>
 
-<div bind:this={container} class="container">
+<div bind:this={container} class="container-box">
 	<canvas bind:this={canvas} class="background-canvas"></canvas>
 	<div class="card">
 		<h1>{m.greeting()}</h1>
@@ -64,9 +64,9 @@
 </div>
 
 <style>
-	.container {
+	.container-box {
 		position: relative;
-		width: 100vw;
+		width: 100%;
 		height: 100vh;
 		display: flex;
 		justify-content: center;
