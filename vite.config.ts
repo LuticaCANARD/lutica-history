@@ -14,6 +14,11 @@ export default defineConfig({
 			outdir: './src/lib/paraglide'
 		})
 	],
+	server: {
+		fs: {
+			allow: ['./rust_renderer']
+		}
+	},
 	test: {
 		projects: [
 			{

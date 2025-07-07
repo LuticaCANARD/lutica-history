@@ -27,3 +27,8 @@ vite.config.ts.timestamp-*
 src/lib/paraglide
 
 .dev.vars*
+
+project.inlang
+
+# Rust
+/rust_renderer/target

@@ -1,0 +1,45 @@
+[package]
+name = "rust_renderer"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+wgpu = { version = "25.0.2", features = [
+    "webgl"
+] }
+wasm-bindgen = "0.2"
+wasm-bindgen-futures = "0.4"
+web-sys = { version = "0.3", features = [
+    'Document',
+    'Window',
+    'HtmlCanvasElement',
+    'Gpu',
+    'GpuAdapter',
+    'GpuDevice',
+    'GpuCanvasContext',
+    'GpuTextureFormat',
+    'GpuShaderModuleDescriptor',
+    'GpuVertexState',
+    'GpuFragmentState',
+    'GpuColorTargetState',
+    'GpuRenderPipelineDescriptor',
+    'GpuRenderPassColorAttachment',
+    'GpuLoadOp',
+    'GpuStoreOp',
+    'GpuRenderPassDescriptor',
+    'GpuCommandEncoderDescriptor',
+    'GpuQueue',
+    'Request',
+    'RequestInit',
+    'RequestMode',
+    'Response',
+    'Window',
+]}
+js-sys = "0.3"
+console_error_panic_hook = "0.1"
+image = "0.25.6"
+anyhow = "1.0"
+raw-window-handle = "0.6"

@@ -1,4 +1,7 @@
 {
-	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"hello_world": "Hello, {name} from ko!"
+    "$schema": "https://inlang.com/schema/inlang-message-format",
+    "title": "자기소개",
+    "greeting": "안녕하세요, 루티카입니다.",
+    "introduction": "이 페이지는 SvelteKit과 Paraglide를 사용하여 만든 간단한 자기소개 페이지입니다.",
+    "change_language": "언어 변경"
 }
