@@ -201,15 +201,23 @@
                     <!-- 이하 카드 본문 -->
                     <div class="main_container ">
                         <div>
-                            <h3 class = "nick_name" style="margin-bottom : 1%">
+                            <h3 class = "nick_name" style="
+                                margin-bottom : 1%;
+                                font-size: 1.5em;
+                            ">
                                 Software Developer
                             </h3>
-                            <h1 class = "nick_name">
+                            <h1 class = "nick_name" style="
+                                font-size: 2.5em;
+                            ">
                                 <a href="https://github.com/LuticaCANARD">Lutica_CANARD</a>
                             </h1>
                         </div>
                         <div class = "stack">
-                            <h3 class = "stack_name">
+                            <h3 class = "stack_name" style="
+                                font-size: 1.5em;
+                                margin-bottom : 1%;
+                            ">
                                 Rust
                             </h3>
                             <p3 class = "stack_name">
@@ -225,15 +233,26 @@
                     </div>
                     <div class="article_bottom">
                         <div class="article_div">
-                            <p1 class= "article">
+                            <p1 class= "article" style="
+                                font-size: 0.85em;
+                                margin-bottom: 1%;"
+                            >
                                 I'm Living in <a href="https://maps.app.goo.gl/393ewhYvVzh1f6qQ6">paju</a>, near <a href="https://maps.app.goo.gl/jSAL18mFud9hi42k7">Seoul, Korea.</a>
                             </p1>
-                            <p2 class= "article">
+                            <p2 class= "article"
+                            style="
+                                font-size: 0.75em;
+                                margin-bottom: 1%;"
+                            >
                                 This card is using <a href="https://gongu.copyright.or.kr/gongu/wrt/wrt/view.do?wrtSn=13288411&menuNo=200195">경기천년제목체</a>
                             </p2>
                         </div>
                         <div class="article_div">
-                            <p1 class= "article">
+                            <p1 class= "article"
+                            style="
+                                font-size: 0.95rem;
+                                margin-bottom: 1%;"
+                            >
                                 presan100@gmail.com
                             </p1>
                         </div>
