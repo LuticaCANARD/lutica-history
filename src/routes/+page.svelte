@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { onMount, onDestroy } from 'svelte';
-	import init, { WgpuContext } from '../../rust_renderer/pkg/rust_renderer';
+	import init, { WgpuContext,CanvasProxy } from '../../rust_renderer/pkg/rust_renderer';
 	import * as m from '$lib/paraglide/messages';
-	import { languageTag, setLanguageTag } from '$lib/paraglide/runtime';
+	import { setLocale,getLocale } from '$lib/paraglide/runtime';
 
 	let canvas: HTMLCanvasElement;
 	let container: HTMLDivElement;
@@ -11,8 +11,9 @@
 
 	onMount(async () => {
 		await init();
-
-		context = await new WgpuContext(canvas, '/placeholder.png');
+		const canvasOrigin = document.createElement('canvas');
+		const canvasProxy = new CanvasProxy(canvasOrigin);
+		context = await new WgpuContext(canvasProxy, '/placeholder.png');
 
 		function render() {
 			if (context) {
@@ -28,7 +29,7 @@
 				if (context) {
 					canvas.width = width;
 					canvas.height = height;
-					context.resize(width, height);
+					
 				}
 			}
 		});
@@ -55,9 +56,9 @@
 
 		<div class="language-switcher">
 			<p>{m.change_language()}</p>
-			<button on:click={() => setLanguageTag('ko')} class:active={languageTag() === 'ko'}>한국어</button>
-			<button on:click={() => setLanguageTag('en')} class:active={languageTag() === 'en'}>English</button>
-			<button on:click={() => setLanguageTag('ja')} class:active={languageTag() === 'ja'}>日本語</button>
+			<button on:click={() => setLocale('ko')} class:active={getLocale() === 'ko'}>한국어</button>
+			<button on:click={() => setLocale('en')} class:active={getLocale() === 'en'}>English</button>
+			<button on:click={() => setLocale('ja')} class:active={getLocale() === 'ja'}>日本語</button>
 		</div>
 	</div>
 </div>

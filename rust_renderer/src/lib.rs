@@ -22,6 +22,14 @@ async fn fetch_binary(url: &str) -> Result<Vec<u8>, JsValue> {
 }
 #[wasm_bindgen]
 pub struct CanvasProxy(HtmlCanvasElement);
+
+#[wasm_bindgen]
+impl CanvasProxy {
+    #[wasm_bindgen(constructor)]
+    pub fn new(canvas: HtmlCanvasElement) -> Self {
+        CanvasProxy(canvas)
+    }
+}
 unsafe impl Send for CanvasProxy {}
 unsafe impl Sync for CanvasProxy {}
 impl Clone for CanvasProxy {
